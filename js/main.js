@@ -19,28 +19,31 @@ function showEvents(data) {
 }
 
 function showSingleEvent(anEvent) {
-    console.log(anEvent._embedded["wp:featuredmedia"])
-    // moved to top of code to load the posts all at once. let template = document.querySelector("#film-template").content;
     let clone = template.cloneNode(true);
 
     //get title
     clone.querySelector("h1").textContent = anEvent.title.rendered;
 
+
     //get description
-    clone.querySelector(".descript").innerHTML = anEvent.content.rendered;
+    clone.querySelector(".event-descript").innerHTML = anEvent.content.rendered;
 
-    //get genre
-    clone.querySelector(".location").textContent = anEvent.acf.location;
 
-    //get director
-    clone.querySelector(".price").textContent = anEvent.acf.price;
+    //get location
+    clone.querySelector(".event-location").textContent = anEvent.acf.event_location;
 
-    //get movie date
-    clone.querySelector(".date").textContent = anEvent.acf.date;
 
-    clone.querySelector(".time").textContent = anEvent.acf["time"];
+    //get price DOESNT WORK WHY????
+    //clone.querySelector(".event-price").textContent = anEvent.acf.event_price;
 
-    //clone.querySelector("img").setAttribute("src", aFilm._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
+
+    //get date
+    clone.querySelector(".event-date").textContent = anEvent.acf.event_date;
+
+    // get time
+    clone.querySelector(".event-time").textContent = anEvent.acf.event_time;
+
+
 
     //get images
 
@@ -63,11 +66,13 @@ fetchEvents();
 //infinite scrolling
 
 setInterval(function () {
-    if (bottomVisible() && lookingForData == false) {
+
+    if (bottomVisible() && lookingForData === false) {
+        console.log("We've reached rock bottom, fetching articles")
         page++;
         fetchEvents();
     }
-}, 100)
+}, 1000)
 
 function bottomVisible() {
     const scrollY = window.scrollY
@@ -75,5 +80,4 @@ function bottomVisible() {
     const pageHeight = document.documentElement.scrollHeight
     const bottomOfPage = visible + scrollY >= pageHeight
     return bottomOfPage || pageHeight < visible
-
 }
