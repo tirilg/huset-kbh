@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huset-KBH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Huset</h1>
+
+    <!--- navigation ---->
+    <div class="nav-background">
+        <nav>
+            <input type="checkbox" id="nav" class="hidden" />
+            <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
+            <div class="nav-container">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!---- template ------>
+
+    <section id="eventlist">
+        <template id="event-template">
+        <article class="event">
+
+            <h1>TITLE</h1>
+            <img src="" alt="">
+            <h2 class="location">Location</h2>
+            <h2 class="date">Date</h2>
+            <div class="descript">DESC GOES HERE</div>
+            <div class="time">Time</div>
+
+        </article>
+</template>
+
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
