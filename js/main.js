@@ -5,7 +5,7 @@ let lookingForData = false; //do not look for data yet
 
 function fetchEvents() {
     lookingForData = true; //start looking for data
-    fetch("http://tkgcreate.com/kea/m2/wp/wp-json/wp/v2/huset_kbh?_embed&per_page=2&page=" + page)
+    fetch("http://tkgcreate.com/kea/m2/wp/wp-json/wp/v2/events?_embed&per_page=10&categories=7,8&order=asc&page=" + page)
         .then(e => e.json())
         .then(showEvents);
 }
@@ -15,6 +15,8 @@ function showEvents(data) {
     console.log(data);
     if (Array.isArray(data)) {
         data.forEach(showSingleEvent);
+    } else {
+        lookingForData = true;
     }
 }
 
@@ -34,14 +36,26 @@ function showSingleEvent(anEvent) {
 
 
     //get price DOESNT WORK WHY????
-    //clone.querySelector(".event-price").textContent = anEvent.acf.event_price;
+    if (anEvent.acf.event_price > 0) {
+        clone.querySelector(".event-price span").textContent = anEvent.acf.event_price;
+        clone.querySelector(".event-free").style.display = "none";
+    } else {
+        clone.querySelector(".event-price").style.display = "none";
+    }
+
 
 
     //get date
-    clone.querySelector(".event-date").textContent = anEvent.acf.event_date;
+    var year = anEvent.acf.event_date.substring(2, 4);
+    var month = anEvent.acf.event_date.substring(4, 6);
+    var day = anEvent.acf.event_date.substring(6, 8);
+
+    clone.querySelector(".event-date").textContent = day + "-" + month + "/" + year;
 
     // get time
     clone.querySelector(".event-time").textContent = anEvent.acf.event_time;
+
+
 
 
 
