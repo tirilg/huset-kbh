@@ -50,7 +50,7 @@ function showSingleEvent(anEvent) {
     var month = anEvent.acf.event_date.substring(4, 6);
     var day = anEvent.acf.event_date.substring(6, 8);
 
-    clone.querySelector(".event-date").textContent = day + "-" + month + "/" + year;
+    clone.querySelector(".event-date").textContent = day + "." + month + "." + year;
 
     // get time
     clone.querySelector(".event-time").textContent = anEvent.acf.event_time;
@@ -62,10 +62,10 @@ function showSingleEvent(anEvent) {
     //get images
 
     if (anEvent._embedded["wp:featuredmedia"]) { //img is there
-        clone.querySelector("img").setAttribute("src", anEvent._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
+        clone.querySelector(".event-pic").setAttribute("src", anEvent._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
 
     } else { //no img
-        clone.querySelector("img").remove();
+        clone.querySelector(".event-pic").remove();
     }
 
     //clone template

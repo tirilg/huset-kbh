@@ -9,6 +9,14 @@ body {
     box-sizing: border-box;
 }
 
+
+/*    logo        */
+
+.logo {
+    width: 40%;
+    padding: 1em;
+}
+
 /*    navgiation    */
 
 nav {
@@ -41,6 +49,23 @@ nav ul li a {
 nav ul li a:hover {
     color: #808080;
     text-decoration: none;
+}
+
+
+/*  events   */
+
+.event-pic {
+    width: 100%;
+}
+
+.event h1 {
+    font-size: 1.5em;
+}
+
+.event {
+    border: 1px solid #000;
+    padding: 2em;
+    margin: 1em;
 }
 
 @media screen and (max-width: 560px) {
@@ -158,14 +183,4 @@ nav ul li a:hover {
 
 .hidden {
     display: none;
-}
-
-
-
-/*  content */
-
-.event {
-    border: 1px solid #000;
-    padding: 2em;
-    margin: 1em;
 }
