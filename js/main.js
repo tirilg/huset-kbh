@@ -68,6 +68,9 @@ function showSingleEvent(anEvent) {
         clone.querySelector(".event-pic").remove();
     }
 
+    //read more
+    clone.querySelector(".read-more").href = "subpage.html?id=" + anEvent.id;
+
     //clone template
     eventlist.appendChild(clone);
 
