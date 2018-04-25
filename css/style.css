@@ -179,7 +179,7 @@ nav ul li a:hover {
 }
 
 .event {
-    border: 1px solid #a67dba;
+    /*border: 1px solid #a67dba;*/
     padding: 2em;
     margin: 1em;
 }
