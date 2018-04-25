@@ -11,10 +11,20 @@ fetch("http://tkgcreate.com/kea/m2/wp/wp-json/wp/v2/events/" + id)
 
 function showSinglePost(aPost) {
     console.log(aPost);
+
+    //get title
     document.querySelector("#singleEvent h1").textContent = aPost.title.rendered;
-    document.querySelector("#singleEvent span").textContent = aPost.acf.event_price;
+
+    //get description
     document.querySelector(".event-descript").innerHTML = aPost.content.rendered;
 
+    //get price
+    if (aPost.acf.event_price > 0) {
+        document.querySelector(".event-price span").textContent = aPost.acf.event_price;
+        document.querySelector(".event-free").style.display = "none";
+    } else {
+        document.querySelector(".event-price").style.display = "none";
+    }
 
 
     //show eventsection

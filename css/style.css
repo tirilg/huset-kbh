@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 * {
@@ -184,9 +184,22 @@ nav ul li a:hover {
     margin: 1em;
 }
 
-buy {
-    background-color: blue
+.event-button {
+    text-decoration: none;
+    background-color: #a67dba;
+    color: white;
+    padding: 0.5em;
 }
+
+.right-button {
+    text-align: right;
+}
+
+.button-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 
 /* subpage */
 
