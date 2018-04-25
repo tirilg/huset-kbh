@@ -182,6 +182,17 @@ nav ul li a:hover {
     /*border: 1px solid #a67dba;*/
     padding: 2em;
     margin: 1em;
+    background-color: rgba(147, 110, 176, 0.2);
+}
+
+.event-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.event-time {
+    text-align: center;
+    font-size: 1.5em;
 }
 
 .event-button {
@@ -198,6 +209,18 @@ nav ul li a:hover {
 .button-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*  footer */
+
+footer {
+    background-color: #CAA8CF;
+    padding: 1em;
+}
+
+footer img {
+    width: 10%;
+
 }
 
 
