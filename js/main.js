@@ -28,14 +28,14 @@ function showSingleEvent(anEvent) {
 
 
     //get description
-    clone.querySelector(".event-descript").innerHTML = anEvent.content.rendered;
+    //clone.querySelector(".event-descript").innerHTML = anEvent.content.rendered;
 
 
     //get location
     clone.querySelector(".event-location").textContent = anEvent.acf.event_location;
 
 
-    //get price DOESNT WORK WHY????
+    //get price and "free"
     if (anEvent.acf.event_price > 0) {
         clone.querySelector(".event-price span").textContent = anEvent.acf.event_price;
         clone.querySelector(".event-free").style.display = "none";
@@ -57,8 +57,8 @@ function showSingleEvent(anEvent) {
 
 
 
-
-
+    //get category
+    clone.querySelector(".event-category").textContent = anEvent.categories;
     //get images
 
     if (anEvent._embedded["wp:featuredmedia"]) { //img is there
@@ -70,6 +70,9 @@ function showSingleEvent(anEvent) {
 
     //read more
     clone.querySelector(".read-more").href = "subpage.html?id=" + anEvent.id;
+
+    //buy ticket
+    clone.querySelector(".buy-ticket").href = "https://www.ticketmaster.dk/search/?keyword=Huset+KBH.%2C+1.+sal+K%C3%B8benhavn+K"
 
     //clone template
     eventlist.appendChild(clone);

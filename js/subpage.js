@@ -13,10 +13,13 @@ function showSinglePost(aPost) {
     console.log(aPost);
     document.querySelector("#singleEvent h1").textContent = aPost.title.rendered;
     document.querySelector("#singleEvent span").textContent = aPost.acf.event_price;
+    document.querySelector(".event-descript").innerHTML = aPost.content.rendered;
 
 
 
     //show eventsection
 
     document.querySelector("#singleEvent").classList.add("slideInEvent")
+
+
 }
