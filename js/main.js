@@ -69,10 +69,10 @@ function showSingleEvent(anEvent) {
     }
 
     //read more
-    // clone.querySelector("#read-more").href = "subpage.html?id=" + anEvent.id;
+    clone.querySelector("#read-more").href = "subpage.html?id=" + anEvent.id;
 
     //buy ticket
-    // clone.querySelector("#buy-ticket").href = "https://www.ticketmaster.dk/search/?keyword=Huset+KBH.%2C+1.+sal+K%C3%B8benhavn+K"
+    clone.querySelector("#buy-ticket").href = "https://www.ticketmaster.dk/search/?keyword=Huset+KBH.%2C+1.+sal+K%C3%B8benhavn+K"
 
     //clone template
     eventlist.appendChild(clone);

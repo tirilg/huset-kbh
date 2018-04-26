@@ -26,6 +26,11 @@ function showSinglePost(aPost) {
         document.querySelector(".event-price").style.display = "none";
     }
 
+    //get images
+
+
+
+
 
     //show eventsection
 
