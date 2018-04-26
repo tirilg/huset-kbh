@@ -58,7 +58,13 @@ function showSingleEvent(anEvent) {
 
 
     //get category
-    clone.querySelector(".event-category").textContent = anEvent.categories;
+    //clone.querySelector(".event-category").textContent =
+    anEvent._embedded["wp:term"][0].forEach(cat=>{
+        console.log(cat.name);
+        let li = document.createElement("li");
+        li.textContent=cat.name
+        clone.querySelector(".event-category ul").appendChild(li)
+    });
     //get images
 
     if (anEvent._embedded["wp:featuredmedia"]) { //img is there
