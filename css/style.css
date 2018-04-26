@@ -185,7 +185,7 @@ nav ul li a:hover {
 
 .event {
     /*border: 1px solid #a67dba;*/
-    background-color: rgba(147, 110, 176, 0.2);
+    /*background-color: rgba(147, 110, 176, 0.2);*/
 }
 
 .event-wrapper {
@@ -193,19 +193,7 @@ nav ul li a:hover {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.event-time {
-    text-align: center;
-    font-size: 1.5em;
-    margin: 0;
-    margin-top: auto;
-}
 
-.event-price {
-    text-align: center;
-    font-size: 1.5em;
-    margin: 0;
-    margin-top: auto;
-}
 
 
 .event-button {
