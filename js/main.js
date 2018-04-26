@@ -5,9 +5,20 @@ let lookingForData = false; //do not look for data yet
 
 function fetchEvents() {
     lookingForData = true; //start looking for data
-    fetch("http://tkgcreate.com/kea/m2/wp/wp-json/wp/v2/events?_embed&per_page=10&categories=7,8&order=asc&page=" + page)
+
+    let urlParams = new URLSearchParams(window.location.search);
+    let catid = urlParams.get("category");
+    if(catid) {
+        fetch("http://tkgcreate.com/kea/m2/wp/wp-json/wp/v2/events?_embed&per_page=10&categories=7,8&order=asc&page=" + page + "&categories=" + catid)
         .then(e => e.json())
         .then(showEvents);
+
+    } else {
+         fetch("http://tkgcreate.com/kea/m2/wp/wp-json/wp/v2/events?_embed&per_page=10&categories=7,8&order=asc&page=" + page)
+        .then(e => e.json())
+        .then(showEvents);
+    }
+
 }
 
 function showEvents(data) {

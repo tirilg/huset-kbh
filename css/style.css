@@ -1,3 +1,5 @@
+/* colors: #a67dba  #CAA8CF  */
+
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 body {
@@ -13,11 +15,17 @@ body {
 
 
 
-/*    logo        */
+/*    logo   and  header    */
 
 .logo {
     width: 60%;
     padding: 1em;
+}
+
+.header {
+    background-color:#CAA8CF;
+    background-image: -webkit-linear-gradient(75deg, #FFFF 50%, #CAA8CF 50%);
+  min-height: 20em;
 }
 
 /*    navgiation    */
@@ -43,7 +51,7 @@ nav ul li a:hover {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background: #1f2227;
+    background: #362D81;
     opacity: 0;
     transition: all 0.2s ease;
 
@@ -103,8 +111,8 @@ nav ul li a:hover {
     height: 48px;
     cursor: pointer;
     z-index: 9999;
-    border-radius: 50%;
-    background: #a67dba;
+   /* border-radius: 50%;*/
+    background: #CAA8CF;
     margin-top: 0.7em
 }
 
@@ -169,9 +177,27 @@ nav ul li a:hover {
     display: none;
 }
 
+/*   local navigation    */
 
 
-/*  events   */
+.local-nav ul {
+    list-style: none;
+    padding:0;
+    text-align: center;
+    margin:0;
+
+}
+
+.local-nav li {
+    display:inline;
+    padding:1em;
+    background-color: rgba(166,125,186,0.5);
+
+}
+
+
+/*          EVENTS           */
+
 
 .event-pic {
     width: 100%;
@@ -181,20 +207,38 @@ nav ul li a:hover {
     font-size: 1.8em;
     font-weight: 700;
     padding: 1em;
+    text-align: center;
 }
 
 .event {
     /*border: 1px solid #a67dba;*/
     /*background-color: rgba(147, 110, 176, 0.2);*/
+       /* background-image: -webkit-linear-gradient(90deg, #FFFF 70%, #CAA8CF 50%);*/
 }
 
 .event-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding:1em 0em 1em 0em;
+}
+
+.event-wrapper h3 {
+    font-size: 1em;
+    font-weight: 100;
+    text-align: center;
+}
+
+.event-line {
+   padding-top:20%;
+}
+hr {
+    width:50%;
+    color:purple;
+
 }
 
 
-
+/* event buttons */
 
 .event-button {
     text-decoration: none;
@@ -209,11 +253,26 @@ nav ul li a:hover {
 
 .button-wrap {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 1em;
 }
 
-/*  footer */
+/* event categories */
+
+.event-category ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+}
+
+.event-category li {
+    display: inline;
+    padding: 0em 2em 0em 2em;
+
+}
+
+/*          FOOTER         */
 
 footer {
     background-color: #CAA8CF;

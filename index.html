@@ -9,8 +9,8 @@
 </head>
 
 <body>
-
-    <a href="index.html"> <img src="img/huset-logo.svg" alt="huset logo" class="logo"></a>
+<div class="header">
+    <a href="index.html"> <img src="img/huset-logo-white.svg" alt="huset logo" class="logo"></a>
 
     <!--- navigation ---->
 
@@ -27,6 +27,19 @@
             </div>
         </nav>
     </div>
+    </div>
+
+    <!--- local navigaton categories -->
+
+               <div class="local-nav">
+               <nav>
+                <ul>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">JAZZ</a></li>
+                    <li><a href="#">BOARDGAMES</a></li>
+                </ul>
+                 </nav>
+            </div>
 
     <!---- template ------>
 
@@ -35,26 +48,31 @@
         <article class="event">
 
             <h1>TITLE</h1>
+              <div class="event-category">
+                <ul></ul>
+            </div>
+
             <img src="" alt="" class="event-pic">
 
             <div class="event-wrapper">
-            <div><h2 class="event-date">Date</h2></div>
-                <div> <h2 class="event-time">Time</h2></div>
-                <div> <h2 class="event-price"><span></span> kr</h2></div>
-               <div class="event-free">Free</div>
+            <div><h3 class="event-date">Date</h3></div>
+            <div><h3 class="event-time">Time</h3></div>
+                <div class="event-line"><hr></div>
+            <div><h3 class="event-location">Location</h3></div>
+            <div class="event-price"> <h3 class="event-price"><span></span> kr</h3></div>
+            <div> <h3 class="event-free">Free</h3></div>
+
                 </div>
 
 
-            <h2 class="event-location">Location</h2>
 
-            <div class="event-category">
-                <ul></ul>
-            </div>
+
+
             <!--<div class="event-descript">DESC GOES HERE</div>-->
             <div class="button-wrap">
                 <div>
                 <p><a href="" id="read-more" class="event-button">Read more</a></p></div>
-                <div></div>
+                <!--<div></div>-->
                 <div class="right-button"><p><a href="" id="buy-ticket" class="event-button">Buy ticket</a></p></div>
             </div>
 
