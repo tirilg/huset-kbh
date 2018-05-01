@@ -25,7 +25,7 @@ body {
 .header {
     background-color:#CAA8CF;
     background-image: -webkit-linear-gradient(75deg, #FFFF 50%, #CAA8CF 50%);
-  min-height: 20em;
+    min-height: 20em;
 }
 
 /*    navgiation    */
@@ -188,12 +188,35 @@ nav ul li a:hover {
 
 }
 
-.local-nav li {
+.local-nav ul li {
     display:inline;
-    padding:1em;
+    padding:1em 1.2em 1em 1.2em;
     background-color: rgba(166,125,186,0.5);
 
+
 }
+
+.local-nav a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.local-nav a:hover {
+    color: #362D81;
+    transition: 1s ease;
+
+}
+
+.arrows {
+    display:block;
+    padding:5em 0em 0em 0em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+
+}
+
 
 
 /*          EVENTS           */
@@ -206,14 +229,16 @@ nav ul li a:hover {
 .event h1 {
     font-size: 1.8em;
     font-weight: 700;
-    padding: 1em;
+
     text-align: center;
+    color: #362D81;
 }
 
 .event {
     /*border: 1px solid #a67dba;*/
     /*background-color: rgba(147, 110, 176, 0.2);*/
        /* background-image: -webkit-linear-gradient(90deg, #FFFF 70%, #CAA8CF 50%);*/
+    padding:1em;
 }
 
 .event-wrapper {
@@ -242,7 +267,7 @@ hr {
 
 .event-button {
     text-decoration: none;
-    background-color: #D785B8;
+    background-color: #936EB0;
     color: white;
     padding: 8px 23px 8px 23px;
 }

@@ -2,6 +2,7 @@
       .then(e => e.json())
       .then(buildMenu)
 
+
   function buildMenu(data) {
       let parentElement = document.querySelector(".nav-container ul");
       data.forEach(item => {
@@ -17,4 +18,8 @@
 
           }
       })
+
+
+
   }
+
