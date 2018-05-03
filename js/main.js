@@ -8,15 +8,15 @@ function fetchEvents() {
 
     let urlParams = new URLSearchParams(window.location.search);
     let catid = urlParams.get("category");
-    if(catid) {
+    if (catid) {
         fetch("http://tkgcreate.com/kea/m2/wp/wp-json/wp/v2/events?_embed&per_page=10&categories=7,8&order=asc&page=" + page + "&categories=" + catid)
-        .then(e => e.json())
-        .then(showEvents);
+            .then(e => e.json())
+            .then(showEvents);
 
     } else {
-         fetch("http://tkgcreate.com/kea/m2/wp/wp-json/wp/v2/events?_embed&per_page=10&categories=7,8&order=asc&page=" + page)
-        .then(e => e.json())
-        .then(showEvents);
+        fetch("http://tkgcreate.com/kea/m2/wp/wp-json/wp/v2/events?_embed&per_page=10&categories=7,8&order=asc&page=" + page)
+            .then(e => e.json())
+            .then(showEvents);
     }
 
 }
@@ -70,10 +70,10 @@ function showSingleEvent(anEvent) {
 
     //get category
 
-    anEvent._embedded["wp:term"][0].forEach(cat=>{
+    anEvent._embedded["wp:term"][0].forEach(cat => {
         console.log(cat.name);
         let li = document.createElement("li");
-        li.textContent=cat.name
+        li.textContent = cat.name
         clone.querySelector(".event-category ul").appendChild(li)
     });
 

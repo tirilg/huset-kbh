@@ -23,7 +23,7 @@ body {
 }
 
 .header {
-    background-color:#CAA8CF;
+    background-color: #CAA8CF;
     background-image: -webkit-linear-gradient(75deg, #FFFF 50%, #CAA8CF 50%);
     min-height: 20em;
 }
@@ -111,7 +111,7 @@ nav ul li a:hover {
     height: 48px;
     cursor: pointer;
     z-index: 9999;
-   /* border-radius: 50%;*/
+    /* border-radius: 50%;*/
     background: #CAA8CF;
     margin-top: 0.7em
 }
@@ -179,19 +179,18 @@ nav ul li a:hover {
 
 /*   local navigation    */
 
-
 .local-nav ul {
     list-style: none;
-    padding:0;
+    padding: 0;
     text-align: center;
-    margin:0;
+    margin: 0;
 
 }
 
 .local-nav ul li {
-    display:inline;
-    padding:1em 1.2em 1em 1.2em;
-    background-color: rgba(166,125,186,0.5);
+    display: inline;
+    padding: 1em 1.2em 1em 1.2em;
+    background-color: rgba(166, 125, 186, 0.5);
 
 
 }
@@ -209,8 +208,8 @@ nav ul li a:hover {
 }
 
 .arrows {
-    display:block;
-    padding:5em 0em 0em 0em;
+    display: block;
+    padding: 5em 0em 0em 0em;
     margin-left: auto;
     margin-right: auto;
     width: 65%;
@@ -221,7 +220,6 @@ nav ul li a:hover {
 
 /*          EVENTS           */
 
-
 .event-pic {
     width: 100%;
 }
@@ -229,7 +227,7 @@ nav ul li a:hover {
 .event h1 {
     font-size: 1.8em;
     font-weight: 700;
-
+    padding: 1em 0em 1em 0em;
     text-align: center;
     color: #362D81;
 }
@@ -237,14 +235,14 @@ nav ul li a:hover {
 .event {
     /*border: 1px solid #a67dba;*/
     /*background-color: rgba(147, 110, 176, 0.2);*/
-       /* background-image: -webkit-linear-gradient(90deg, #FFFF 70%, #CAA8CF 50%);*/
-    padding:1em;
+    /* background-image: -webkit-linear-gradient(90deg, #FFFF 70%, #CAA8CF 50%);*/
+    padding: 1em;
 }
 
 .event-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding:1em 0em 1em 0em;
+    padding: 1em 0em 1em 0em;
 }
 
 .event-wrapper h3 {
@@ -254,11 +252,12 @@ nav ul li a:hover {
 }
 
 .event-line {
-   padding-top:20%;
+    padding-top: 20%;
 }
+
 hr {
-    width:50%;
-    color:purple;
+    width: 50%;
+    color: purple;
 
 }
 
@@ -321,4 +320,14 @@ footer img {
 #singleEvent.slideInEvent {
     transform: translateX(0vw);
 
+}
+
+#singleEvent h1 {
+    text-align: center;
+    color: #362D81;
+}
+
+.event-descript {
+    text-align: center;
+    padding: 1em;
 }
