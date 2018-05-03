@@ -1,6 +1,5 @@
   fetch("http://tkgcreate.com/kea/m2/wp/wp-json/wp/v2/categories?categories=7,8")
       .then(e => e.json())
-
       .then(buildMenu)
 
 

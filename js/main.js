@@ -68,9 +68,9 @@ function showSingleEvent(anEvent) {
 
 
 
-    //get category
+    //get tags
 
-    anEvent._embedded["wp:term"][0].forEach(cat => {
+    anEvent._embedded["wp:term"][1].forEach(cat => {
         console.log(cat.name);
         let li = document.createElement("li");
         li.textContent = cat.name
