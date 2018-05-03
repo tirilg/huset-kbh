@@ -35,7 +35,7 @@ function showSingleEvent(anEvent) {
     let clone = template.cloneNode(true);
 
     //get title
-    clone.querySelector("h1").textContent = anEvent.title.rendered;
+    clone.querySelector("h1").innerHTML = anEvent.title.rendered;
 
 
     //get description / show in subpage instead
