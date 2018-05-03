@@ -13,7 +13,7 @@ function showSinglePost(aPost) {
     console.log(aPost);
 
     //get title
-    document.querySelector("#singleEvent h1").textContent = aPost.title.rendered;
+    document.querySelector("#singleEvent h1").innerHTML = aPost.title.rendered;
 
     //get description
     document.querySelector(".event-descript").innerHTML = aPost.content.rendered;
@@ -49,7 +49,8 @@ function showSinglePost(aPost) {
     // get time
     document.querySelector(".event-time").textContent = aPost.acf.event_time;
 
-
+    //ticket
+    document.querySelector("#buyTicket").href = "https://www.ticketmaster.dk/search/?keyword=Huset+KBH.%2C+1.+sal+K%C3%B8benhavn+K"
 
 
 

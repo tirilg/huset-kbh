@@ -38,10 +38,6 @@ function showSingleEvent(anEvent) {
     clone.querySelector("h1").innerHTML = anEvent.title.rendered;
 
 
-    //get description / show in subpage instead
-    //clone.querySelector(".event-descript").innerHTML = anEvent.content.rendered;
-
-
     //get location
     clone.querySelector(".event-location").textContent = anEvent.acf.event_location;
 
